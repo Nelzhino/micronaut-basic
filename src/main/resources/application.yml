@@ -1,0 +1,24 @@
+
+micronaut:
+  application:
+    name: airportService
+
+jackson:
+  bean-introspection-module: true
+
+datasources:
+  default:
+    url: jdbc:mysql://localhost:3306/airport-db?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root2021.
+
+jpa:
+  default:
+    packages-to-scan:
+      - 'com.hkg.micronaut.airport'
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
